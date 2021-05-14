@@ -1,37 +1,26 @@
-## Welcome to GitHub Pages
+### Introduction
 
-You can use the [editor on GitHub](https://github.com/abcdl44/320Final/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Our project involves comparing the competitive regions of North America and Western Europe
+in the popular online competitive game League of Legends. Fans from both regions have commonly
+bantered back and forth as to which region is the superior one, and thus, using the online
+Kaggle League of Legends dataset (found [here](https://www.kaggle.com/chuckephron/leagueoflegends)) this
+project hopes to add fuel to the raging debate.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+The Kaggle League of Legends dataset includes the data of every single competitive game of League of
+Legends played from Summer 2014 to Summer 2017. While the dataset contains a vast amount of detailed
+information about each game, the only data we will be concerning ourselves with is winrate. After all,
+it doesn't matter how well your individual players perform in a game if the game is still lost. A team could
+be massively ahead, then embarrassingly lose the overall match or series. Thus, the only valid metric for
+comparison would be winrate.
 
-### Markdown
+Unfortunately, the dataset does not contain any information about things not directly related to the game.
+Thus we cannot see team payrolls, staff size, or how long a team has been around. Those metrics would be
+interesting to analyze, but we do not have the data to perform such analysis.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+We start out by importing everything necessary for the project. 
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/abcdl44/320Final/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+'import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import sklearn as skl
+from sklearn.linear_model import LinearRegression'
