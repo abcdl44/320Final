@@ -19,15 +19,10 @@ interesting to analyze, but we do not have the data to perform such analysis.
 
 We start out by importing everything necessary for the project. 
 
-
 `
 import pandas as pd
-
 import numpy as np
-
 import matplotlib.pyplot as plt
-
 import sklearn as skl
-
 from sklearn.linear_model import LinearRegression
 `
